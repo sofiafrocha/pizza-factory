@@ -10,7 +10,7 @@
     }
 
 	//ir buscar o id da encomenda que acabou de fazer -_-
-	//(...)
+	//listar todos, ordenar por data e limitar ao primeiro
 	//fazer uma pizza
 	$sql_pizza="INSERT INTO PIZZA (id_pizza, id_enc, estado, tamanho, massa, tomate, queijo, data) VALUES ('xxx', 'xxxx', '0', 'alta', 'yes', 'yes', 'xxxxx')";
 
@@ -20,7 +20,7 @@
     }
 	
 	//encontrar id da pizza que acabámos de fazer -_-
-	//(...)
+	//listar todos, ordenar por data e limitar ao primeiro
 	//por ingredientes na pizza
 	$sql_ingredientes="INSERT INTRO PIZZA_has_INGREDIENTE (id_ingredientes, id_pizza) VALUES ('xxx', 'xxx')";
 
