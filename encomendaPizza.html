@@ -1,12 +1,13 @@
 <html>
 	<head>
-		<title>Ementa</title>
+		<title>Encomenda</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0">
 		<meta name="description" content="pizza factory, a faux online pizza joint">
 		<meta name="author" content="Mariana Martins, Sofia Rocha">
 		<meta name="keywords" content="pizza, food, online, order, fake, false, faux">
-		
+        
+        <link href="http://necolas.github.io/normalize.css/3.0.1/normalize.css" rel="stylesheet" media="screen">
 		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 		<link href="css/style.css" rel="stylesheet" media="screen">
 		<link href="img/favicon.ico" rel="shortcut icon">
@@ -16,51 +17,104 @@
 	</head>
 
 	<body>
-		<div class="container">
-			
-			<nav>
-				<div class="nav-wrapper">
-					<a href="#" class="brand-logo">Logo</a>
-					<ul id="nav-mobile" class="right side-nav">
-						<li><a href="#">Ementa</a></li>
-						<li><a href="#">Encomendar</a></li>
-						<li><a href="#">Registar</a></li>
-						<li><a href="#">Log In</a></li>
+        
+        <nav>
+            <div class="nav-wrapper">
+				<a href="#" class="brand-logo">Logo</a>
+				    <ul id="nav-mobile" class="right side-nav">
+				    <li><a href="#">Ementa</a></li>
+				    <li><a href="#" id="active">Encomendar</a></li>
+				    <li><a href="#">Registar</a></li>
+				    <li><a href="#">Log In</a></li>
 					</ul>
-				</div>
-			</nav>
+            </div>
+        </nav>
 			
+		<div class="container">
 			<div class="row">
-				<form class="col s12">
-					<div class="row">
-					  <label>Option</label>
-					  <select>
-						<option value="" disabled selected>Massa</option>
-						<option value="1">Massa Alta</option>
-						<option value="2">Massa Fina</option>
-						<option value="3">Massa Rolling</option>
-					  </select>
-					</div>
-				  <div class="row">
-					<div class="input-field col s12">
-					  <input id="email" type="email" required>
-					  <label for="email">Email</label>
-					</div>
-				  </div>
-				</form>
-			  </div>
-			
-			<div class="row">
-					  <label>Option</label>
-					  <select>
-						<option value="" disabled selected>Massa</option>
-						<option value="1">Massa Alta</option>
-						<option value="2">Massa Fina</option>
-						<option value="3">Massa Rolling</option>
-					  </select>
-					</div>
-			
-		</div>
+                <div class="col s6 m4 l4">
+				<form>
+                    <label><h5> Massa: </h5></label>
+                    <p>
+                      <input type="radio" name="massa" id="massa1" />
+                      <label for="massa1"> Massa Fina </label>
+                    </p>
+                    <p>
+                      <input type="radio" name="massa" id="massa2" />
+                      <label for="massa2"> Massa Alta </label>
+                    </p>
+                    <p>
+                      <input type="radio" name="massa" id="massa3" />
+                      <label for="massa3"> Massa Rolling </label>
+                    </p>
+                </div>
+                 
+                                                        
+                    <div class="col s6 m4 l4">
+                    <label><h5> Queijo: </h5></label>
+                    <p>
+                      <input type="radio" name ="queijo" id="queijo1" />
+                      <label for="queijo1"> Mozarella </label>
+                    </p>
+                    <p>
+                      <input type="radio" name ="queijo" id="queijo2" />
+                      <label for="queijo2"> Queijo de Cabra </label>
+                    </p>
+                    <p>
+                      <input type="radio" name ="queijo" id="queijo3" />
+                      <label for="queijo3"> Nenhum </label>
+                    </p>
+
+                </div>
+
+                <div class="col s6 m4 l4">
+                    <label><h5> Ingredientes: </h5></label>
+                    <p>
+                      <input type="number" id="ingrediente1" max="3" min="0"/>
+                      <label for="ingrediente1"> Pimento </label>
+                    </p>
+                      
+                    <p>
+                      <input type="number" id="ingrediente2" max="3" min="0"/>
+                      <label for="ingrediente2"> Ananás </label>
+                    </p>
+                    <p>
+                        <input type="number" id="ingrediente3" max="3" min="0"/>
+                        <label for="ingrediente3"> Cogumelos </label>
+                    </p>
+                      <p>
+                        <input type="number" id="ingrediente4" max="3" min="0"/>
+                        <label for="ingrediente4"> Bacon </label>
+                    </p>
+                                        <p>
+                      <input type="number" id="ingrediente5" max="3" min="0"/>
+                      <label for="ingrediente5"> Courgette </label>
+                    </p>
+                    <p>
+                      <input type="number" id="ingrediente6" max="3" min="0"/>
+                      <label for="ingrediente6"> Fiambre </label>
+                    </p>
+                    <p>
+                      <input type="number" id="ingrediente7" max="3" min="0"/>
+                      <label for="ingrediente7"> Cogumelos </label>
+                    </p>
+                      <p>
+                        <input type="number" id="ingrediente8" max="3" min="0" disabled="disabled"/>
+                        <label for="ingrediente8"> Bacon </label>
+                    </p>
+     
+                    </div>
+                    
+                     <div class="row">
+                         <div class="col s6 m4 l4">
+                           <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                            <i class="mdi-content-send right"></i>
+                             </button>
+                         </div>
+                    </div>
+                </form>  
+
+            </div>
 		
 		<!--Import jQuery before materialize.js-->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

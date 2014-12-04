@@ -1,0 +1,17 @@
+body{
+    background-color: WhiteSmoke;
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 10px;
+}
+
+nav{
+    background-color: FireBrick;
+    margin-bottom: 30px;
+}
+
+nav #active{
+    background-color: #ea454b;
+}
