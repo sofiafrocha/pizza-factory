@@ -38,23 +38,35 @@
 			<div class="row">
 				<div class="input-field col s12">
 					<form action="signup.php" method="POST">
-						<input type="text" id=nome required>
-						<label for="nome">Nome</label>
+						<div class="input-field col s6">
+							<label for="nome">Nome</label>
+							<input type="text" id=nome required>
+						</div>
 						
-						<input type="text" id=morada required>
-						<label for="morada">Morada</label>
+						<div class="input-field col s6">
+							<label for="morada">Morada</label>
+							<input type="text" id=morada required>
+						</div>
 						
-						<input type="text" id=telefone required>
-						<label for="telefone">Telefone</label>
+						<div class="input-field col s6">
+							<input type="text" id=telefone required>
+							<label for="telefone">Telefone</label>
+						</div>
 						
-						<input type="text" id=email required>
-						<label for="email">E-mail</label>
+						<div class="input-field col s6">
+							<input type="text" id=email required>
+							<label for="email">E-mail</label>
+						</div>
 						
-						<input type="text" id=username required>
-						<label for="username">Username</label>
+						<div class="input-field col s6">
+							<input type="text" id=username required>
+							<label for="username">Username</label>
+						</div>
 						
-						<input type="text" id=password required>
-						<label for="password">Password</label>
+						<div class="input-field col s6">
+							<input type="text" id=password required>
+							<label for="password">Password</label>
+						</div>
 					</form>
 				</div>
 			</div>
