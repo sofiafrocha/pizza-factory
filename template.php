@@ -13,6 +13,7 @@
 		<meta name="keywords" content="pizza, food, online, order, fake, false, faux">
 		
 		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+		<link href="css/ionicons.min.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet" media="screen">
 		<link href="img/favicon.ico" rel="shortcut icon">
 		
@@ -25,10 +26,10 @@
 			
 			<nav>
 				<div class="nav-wrapper">
-					<a href="#" class="brand-logo">Logo</a>
+					<a href="#" class="brand-logo">The <i class="icon ion-pizza"></i> Factory</a>
 					<ul id="nav-mobile" class="right side-nav">
-						<li><a href="#">Ementa</a></li>
-						<li><a href="#">Encomendar</a></li>
+						<li><a href="ementa.html">Ementa</a></li>
+						<li><a href="encomendaPizza.html">Encomendar</a></li>
 						<li><a href="registar.php">Registar</a></li>
 						<li><a href="login.php">Log In</a></li>
 					</ul>
