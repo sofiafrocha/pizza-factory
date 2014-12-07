@@ -29,17 +29,12 @@
       <div class="container">
          <div class="row">
          	<form class="col offset-s3 s6 offset-s3" action="php/login.php" method="POST">
+				
+				<input name="username" type="text" required autofocus>
+				<label for="username">username</label>
+				
 				<input name="password" type="text" required>
 				<label for="password">password</label>
-				
-				<div class="input-field col s12">
-					<input name="username" type="text" required autofocus>
-					<label for="username">username</label>
-				</div>
-
-				<div class="input-field col s12">
-					
-				</div>
 
 				<div class="row">
 					<div class="col offset-s3 s6 offset-s3">
