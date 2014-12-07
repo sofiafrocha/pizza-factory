@@ -28,15 +28,17 @@
        
       <div class="container">
          <div class="row">
-         	<form class="col offset-s3 s6 offset-s3" action="php/signup.php" method="POST">
+         	<form class="col offset-s3 s6 offset-s3" action="php/login.php" method="POST">
+				<input name="password" type="text" required>
+				<label for="password">password</label>
+				
 				<div class="input-field col s12">
-					<input id="username" type="text" required autofocus>
+					<input name="username" type="text" required autofocus>
 					<label for="username">username</label>
 				</div>
 
 				<div class="input-field col s12">
-					<input id="password" type="password" required>
-					<label for="password">password</label>
+					
 				</div>
 
 				<div class="row">

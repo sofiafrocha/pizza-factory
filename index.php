@@ -95,6 +95,14 @@
 
 			</div>
 			
+			<div class="row">
+				<div class="col s12">
+					<?php
+						echo "user_id: " . $_SESSION['user_id'];
+					?>
+				</div>
+			</div>
+			
 		</div>
 		
 		<!--Import jQuery before materialize.js-->
