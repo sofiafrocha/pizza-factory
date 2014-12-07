@@ -95,12 +95,12 @@
 
 			</div>
 			
-			<div class="row">
-				<div class="col s12">
-					<?php
-						echo "user_id: " . $_SESSION['user_id'];
-					?>
-				</div>
+			<div class="collection">
+			
+					<a href="#!" class="collection-item"><?php echo $_SESSION['user_id'] ?></a>
+					<a href="#!" class="collection-item"><?php echo $_SESSION['name'] ?></a>
+					<a href="#!" class="collection-item"><?php echo $_SESSION['username'] ?></a>
+					<a href="#!" class="collection-item"><?php echo $_SESSION['logged_in'] ?></a>
 			</div>
 			
 		</div>

@@ -40,6 +40,13 @@
 
 			</div>
 			
+			<div class="collection">
+			
+					<a href="#!" class="collection-item"><?php echo $_SESSION['user_id'] ?></a>
+					<a href="#!" class="collection-item"><?php echo $_SESSION['name'] ?></a>
+					<a href="#!" class="collection-item"><?php echo $_SESSION['username'] ?></a>
+					<a href="#!" class="collection-item"><?php echo $_SESSION['logged_in'] ?></a>
+			</div>
 		</div>
 		
 		<!--Import jQuery before materialize.js-->
