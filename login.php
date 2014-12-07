@@ -28,26 +28,26 @@
        
       <div class="container">
          <div class="row">
-             <form class="col offset-s3 s6 offset-s3">
-                         <div class="input-field col s12">
-                          <input id="username" type="text" required autofocus>
-                          <label for="username">username</label>
-                        </div>
-                 
-                        <div class="input-field col s12">
-                          <input id="password" type="password" required>
-                          <label for="password">password</label>
-                        </div>
-          </div>
-          
-        <div class="row">
-         <div class="col offset-s3 s6 offset-s3">
-            <button class="btn waves-effect waves-light" type="submit" name="action">Confirmar 
-            <i class="mdi-content-send right"></i>
-            </button>
-         </div>
-         </div>
-             </form>
+         	<form class="col offset-s3 s6 offset-s3" action="php/signup.php" method="POST">
+				<div class="input-field col s12">
+					<input id="username" type="text" required autofocus>
+					<label for="username">username</label>
+				</div>
+
+				<div class="input-field col s12">
+					<input id="password" type="password" required>
+					<label for="password">password</label>
+				</div>
+
+				<div class="row">
+					<div class="col offset-s3 s6 offset-s3">
+					<button class="btn waves-effect waves-light" type="submit" name="action">Confirmar 
+					<i class="mdi-content-send right"></i>
+					</button>
+					</div>
+				</div>
+       		</form>
+		  </div>
        </div>
        
        
