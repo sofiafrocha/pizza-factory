@@ -1,5 +1,5 @@
 <?php
-
+	session_start();
 	include "connect.php";
 
 	echo "ele está a passar o username " . $_POST[username] . "<br>";
