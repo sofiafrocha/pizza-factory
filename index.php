@@ -95,6 +95,12 @@
 
 			</div>
 			
+			<div class="row">
+				<div class="col l6 l-offset-3">	
+					<a href="teste.php" class="waves-effect waves-light btn-large">Button</a>
+				</div>
+			</div>
+			
 			<div class="collection">
 			
 					<a href="#!" class="collection-item"><?php echo $_SESSION['user_id'] ?></a>

@@ -2,13 +2,27 @@
 	session_start();
 	include "connect.php";
 
-	//fazer uma encomenda
-	$sql_enc="INSERT INTO ENCOMENDA (id_cliente, estado) VALUES ($_SESSION['id_cliente'], 0)";
+	echo "começar.";
+	$cobaia = 1;
 
-	if (!mysqli_query($con,$sql_enc))
+	//fazer uma encomenda
+	//não esquecer o preço
+
+	$sql_password = mysqli_query($con, "SELECT PASSWORD FROM `CLIENTE` where USERNAME = 'okenobi'");
+
+	if (!$sql_password)
+	{
+		die('Error: ' . mysqli_error($con));
+	}
+
+	/*$sql_enc = mysqli_query($con, "INSERT INTO ENCOMENDA (CLI_ID_CLIENTE, ESTADO) VALUES (1, 0)");
+
+	if (!$sql_enc)
     {
-      die('Error: ' . mysqli_error($con));
+      die('Error 1: ' . mysqli_error($con));
     }
+
+	echo "inseriu encomenda" . "<br>";
 
 	//ir buscar o id da encomenda que acabou de fazer -_-
 	//listar todos, ordenar por data e limitar ao primeiro
@@ -17,6 +31,8 @@
 	
 	$id_enc = $row[0];
 
+	echo "foi buscar o id da encomenda" . $id_enc . "<br>";
+
 	//fazer uma pizza
 	$sql_pizza="INSERT INTO PIZZA (id_enc, estado, tamanho, massa, tomate, queijo) VALUES ('$id_enc', '0', 'alta', 'yes', 'yes')";
 
@@ -24,6 +40,8 @@
     {
       die('Error: ' . mysqli_error($con));
     }
+
+	echo "inseriu pizza" . "<br>";
 	
 	//encontrar id da pizza que acabámos de fazer -_-
 	//listar todos, ordenar por data e limitar ao primeiro
@@ -31,6 +49,8 @@
 	$row = mysqli_fetch_array($sql_getIdPizza, MYSQLI_NUM);
 	
 	$id_pizza= $row[0];
+	
+	echo "encontrou o id da pizza: " . $id_pizza . "<br>";
 
 	//por ingredientes na pizza
 	$sql_ingredientes="INSERT INTRO PIZZA_has_INGREDIENTE (id_ingredientes, id_pizza) VALUES ('1', '$id_pizza'), ('2', '$id_pizza'), ('3', '$id_pizza'), ('4', '$id_pizza')";
@@ -39,5 +59,5 @@
     {
       die('Error: ' . mysqli_error($con));
     }
-	
+	echo "pôs os ingredientes " . "<br>";*/
 ?>
