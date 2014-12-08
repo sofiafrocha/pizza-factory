@@ -20,16 +20,20 @@
 	//password está certa
 	if ($_POST[password] == $password){
 		
-		$sql_user_id = mysqli_query($con, "SELECT ID_CLIENTE FROM `CLIENTE` where USERNAME = '$_POST[username]'");
+		$sql_user_id = mysqli_query($con, "SELECT ID_CLIENTE, NOME, USERNAME FROM `CLIENTE` where USERNAME = '$_POST[username]'");
 		$row = mysqli_fetch_assoc($sql_user_id);
 		
 		//armazena user id
 		$_SESSION['user_id'] = $row['ID_CLIENTE'];
+		$_SESSION['name'] = $row['NOME'];
+		$_SESSION['username'] = $row['USERNAME'];
+		$_SESSION['logged_in'] = true;
 		
 		echo "session user " . $_SESSION['user_id'] . "<br>";
 		echo "sql user " . $row['ID_CLIENTE'] . "<br>";
 		
 		echo "login successfull";
+		echo "<a href="../index.php">index</a>";
 		//por redirect
 	}
 
