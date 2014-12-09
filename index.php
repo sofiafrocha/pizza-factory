@@ -26,10 +26,10 @@
 			
 			<nav>
 				<div class="nav-wrapper">
-					<a href="#" class="brand-logo">The <i class="icon ion-pizza"></i> Factory</a>
+					<a href="index.php" class="brand-logo">The <i class="icon ion-pizza"></i> Factory</a>
 					<ul id="nav-mobile" class="right side-nav">
-						<li><a href="ementa.html">Ementa</a></li>
-						<li><a href="encomendaPizza.html">Encomendar</a></li>
+						<li><a href="ementa.php">Ementa</a></li>
+						<li><a href="encomenda.php">Encomendar</a></li>
 						<li><a href="registar.php">Registar</a></li>
 						<li><a href="login.php">Log In</a></li>
 					</ul>
@@ -37,67 +37,10 @@
 			</nav>
 			
 			<div class="row">
-				<div class="row">
-				<div class="col s6 m6 l6">
-					<ul class="collection with-header">
-						<li class="collection-header"><h4>Bases</h4></li>
-						<a href="#!" class="collection-item">Fina</a>
-						<a href="#!" class="collection-item">Alta</a>
-						<a href="#!" class="collection-item">Sem glúten</a>
-						<a href="#!" class="collection-item">Rolling</a>
-					  </ul>
-				</div>
-				
-				<div class="col s6 m6 l6">
-					<ul class="collection with-header">
-						<li class="collection-header"><h4>Toppings</h4></li>
-						<a href="#!" class="collection-item">Salsichas</a>
-						<a href="#!" class="collection-item">Cogumelos</a>
-						<a href="#!" class="collection-item">Milho</a>
-						<a href="#!" class="collection-item">Cebola</a>
-					  </ul>
-				</div>
-			</div>
-			
-			<div class="row">
-				<form class="col s12">
-				  <div class="row">
-					<div class="input-field col s6">
-					  <input id="first_name" type="text" required>
-					  <label for="first_name">First Name</label>
-					</div>
-					<div class="input-field col s6">
-					  <input id="last_name" type="text" required>
-					  <label for="last_name">Last Name</label>
-					</div>
-				  </div>
-				  <div class="row">
-					<div class="input-field col s12">
-					  <input id="username" type="text" required>
-					  <label for="username">Username</label>
-					</div>
-				  </div>
-				  <div class="row">
-					<div class="input-field col s12">
-					  <input id="password" type="password" required>
-					  <label for="password">Password</label>
-					</div>
-				  </div>
-				  <div class="row">
-					<div class="input-field col s12">
-					  <input id="email" type="email" required>
-					  <label for="email">Email</label>
-					</div>
-				  </div>
-					<a class="waves-effect waves-light btn">submit</a>
-				</form>
-			  </div>
-
-			</div>
-			
-			<div class="row">
-				<div class="col l6 l-offset-3">	
-					<a href="teste.php" class="waves-effect waves-light btn-large">Button</a>
+				<div class="col s4 m4 l4 offset-s2 offset-m2 offset-l2">
+					<a href="#">Lista Encomendas</a>
+					<br>
+					<a href="#">Lista Pizzas</a>
 				</div>
 			</div>
 			
