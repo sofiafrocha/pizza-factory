@@ -37,10 +37,42 @@
 			</nav>
 			
 			<div class="row">
-				<div class="col s4 m4 l4 offset-s2 offset-m2 offset-l2">
-					<a href="listaEncomendas.php">Lista Encomendas</a>
-					<br>
-					<a href="listaPizzas.php">Lista Pizzas</a>
+				<div class="col s10 m10 l10 offset-s1 offset-m1 offset-l1">
+					
+					<table>
+						<thead>
+							<tr>
+								<th data-field="id">Id Enc</th>
+								<th data-field="id">Id Cliente</th>
+								<th data-field="id">Data</th>
+								<th data-field="id">Estado</th>
+								<th data-field="id">Preço</th>
+							</tr>
+						</thead>
+						<tbody>
+						<?php
+							include "php/connect.php";
+							
+							$sql_get_encs = " SELECT * FROM ENCOMENDA";
+
+							$result = mysqli_query($con, $sql_get_encs);
+
+							if (!$result){
+								die('Error: ' . mysqli_error($con));
+							}
+
+							$row = mysqli_fetch_assoc($result);
+
+							while ( $row != null){ 
+								echo "<tr><td>" . $row['ID_ENC'] . "</td><td> ". $row['CLI_ID_CLIENTE'] . "</td><td>" . $row['DATA'] . "</td><td>" . $row['ESTADO'] . "</td><td>" . $row['PRECO'] . "</td></tr>";
+								#echo "<tr><td>" . $row['ID_ENC'] . "</td><td> ". $row['CLI_ID_CLIENTE'] . "</td><td> ". $row['DATA'] . "</td><td> ". $row['ESTADO'] . "</td><td> ". $row['PRECO'] . "</td></tr>";
+								$row = mysqli_fetch_assoc($result);
+							}
+						?>
+
+						</tbody>
+					</table>
+
 				</div>
 			</div>
 			
@@ -51,7 +83,6 @@
 					<a href="#!" class="collection-item"><?php echo $_SESSION['username'] ?></a>
 					<a href="#!" class="collection-item"><?php echo $_SESSION['logged_in'] ?></a>
 			</div>
-			
 		</div>
 		
 		<!--Import jQuery before materialize.js-->
