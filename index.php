@@ -41,6 +41,8 @@
 					<a href="listaEncomendas.php">Lista Encomendas</a>
 					<br>
 					<a href="listaPizzas.php">Lista Pizzas</a>
+					<br>
+					<a href="php/logout.php">Log Out</a>
 				</div>
 			</div>
 			
