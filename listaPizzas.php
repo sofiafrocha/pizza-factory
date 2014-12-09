@@ -38,22 +38,28 @@
 			
 			<div class="row">
 				<div class="col s10 m10 l10 offset-s1 offset-m1 offset-l1">
-					
+
 					<table>
 						<thead>
 							<tr>
-								<th data-field="id">Id Enc</th>
-								<th data-field="id">Id Cliente</th>
-								<th data-field="id">Data</th>
+								<th data-field="id">Cliente</th>
+								<th data-field="id">Pizza</th>
+								<th data-field="id">Enc</th>
 								<th data-field="id">Estado</th>
+								<th data-field="id">Tamanho</th>
+								<th data-field="id">Massa</th>
+								<th data-field="id">Tomate</th>
+								<th data-field="id">Queijo</th>
+								<th data-field="id">Data</th>
 								<th data-field="id">Preço</th>
 							</tr>
 						</thead>
+						
 						<tbody>
 						<?php
 							include "php/connect.php";
 							
-							$sql_get_encs = " SELECT * FROM ENCOMENDA";
+							$sql_get_encs = "SELECT ENCOMENDA.CLI_ID_CLIENTE, PIZZA.ID_PIZZA, PIZZA.ID_ENC, PIZZA.ESTADO, PIZZA.TAMANHO, PIZZA.MASSA, PIZZA.TOMATE, PIZZA.QUEIJO, PIZZA.DATA, PIZZA.PRECO FROM PIZZA, ENCOMENDA where PIZZA.ID_ENC = ENCOMENDA.ID_ENC ";
 
 							$result = mysqli_query($con, $sql_get_encs);
 
@@ -64,7 +70,7 @@
 							$row = mysqli_fetch_assoc($result);
 
 							while ( $row != null){ 
-								echo "<tr><td>" . $row['ID_ENC'] . "</td><td> ". $row['CLI_ID_CLIENTE'] . "</td><td>" . $row['DATA'] . "</td><td>" . $row['ESTADO'] . "</td><td>" . $row['PRECO'] . "</td></tr>";
+								echo "<tr><td>" . $row['CLI_ID_CLIENTE'] . "</td><td> ". $row['ID_PIZZA'] . "</td><td> " . $row['ID_ENC'] . "</td><td>" . $row['ESTADO'] . "</td><td>" . $row['TAMANHO'] . "</td><td>" . $row['MASSA'] . "</td><td>" . $row['TOMATE'] . "</td><td>" . $row['QUEIJO'] . "</td><td>" . $row['DATA'] . "</td><td>" . $row['PRECO'] . "</td></tr>";
 								$row = mysqli_fetch_assoc($result);
 							}
 						?>
