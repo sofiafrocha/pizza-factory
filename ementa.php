@@ -20,13 +20,12 @@
 		<div class="container">
 			<nav>
 				<div class="nav-wrapper">
-					<a href="#" class="brand-logo">The <i class="icon ion-pizza"></i> Factory</a>
+					<a href="index.php" class="brand-logo">The <i class="icon ion-pizza"></i> Factory</a>
 					<ul id="nav-mobile" class="right side-nav">
-						<li><a href="#" id="active">Ementa</a></li>
-						<li><a href="encomendaPizza.html">Encomendar</a></li>
-						<li><a href="#">Registar</a></li>
-						<li><a href="login.html">Log In</a></li>
-
+						<li><a href="ementa.php">Ementa</a></li>
+						<li><a href="encomenda.php">Encomendar</a></li>
+						<li><a href="registar.php">Registar</a></li>
+						<li><a href="login.php">Log In</a></li>
 					</ul>
 				</div>
 			</nav>
