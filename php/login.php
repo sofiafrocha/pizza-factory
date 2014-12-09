@@ -6,6 +6,7 @@
 
 	$sql_password = mysqli_query($con, "SELECT PASSWORD FROM `CLIENTE` where USERNAME = '$_POST[username]'");
 
+
 	if (!$sql_password)
 	{
 		die('Error: ' . mysqli_error($con));
@@ -32,9 +33,9 @@
 		echo "session user " . $_SESSION['user_id'] . "<br>";
 		echo "sql user " . $row['ID_CLIENTE'] . "<br>";
 		
-		echo "login successfull";
-		echo "<a href="../index.php">index</a>";
-		//por redirect
+		echo "login successfull"; 
+		//echo "<a href="../index.php">index</a>"; 
+		//por redirect 
 	}
 
 	//password está errada
@@ -45,5 +46,6 @@
 	mysqli_close($db);
 
 	mysqli_close($con);
+
 
 ?>

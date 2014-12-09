@@ -8,7 +8,7 @@
 	//fazer uma encomenda
 	//não esquecer o preço
 
-	$sql_password = mysqli_query($con, "SELECT PASSWORD FROM `CLIENTE` where USERNAME = 'okenobi'");
+	$sql_password = mysqli_query($con, "SELECT PASSWORD FROM `CLIENTE` where USERNAME = 'santaclaus'");
 
 	if (!$sql_password)
 	{
@@ -20,7 +20,7 @@
 	if (!$sql_enc)
     {
       die('Error 1: ' . mysqli_error($con));
-    }
+    } 
 
 	echo "inseriu encomenda" . "<br>";
 
