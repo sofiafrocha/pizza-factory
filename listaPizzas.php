@@ -1,6 +1,38 @@
 <?php
 	session_start();
-	include "connect.php";
+	include "php/connect.php";
+
+	if(isset($_POST[state_changer])){
+		echo "who clicked the buttons?!" . "<br>";
+
+		echo "the lucky number is: " . $_POST[state_changer] .  "<br>";
+
+		//mudar o estado da pizza
+		$pizza_id = $_POST[state_changer];
+		//encontrar estado actual
+		$sql_get_state = mysqli_query($con, "SELECT ESTADO from `PIZZA` where `ID_PIZZA` = $pizza_id");
+
+		if (!$sql_get_state)
+	    {
+	      die('Erro a ir buscar o estado da pizza: ' . mysqli_error($con));
+	    }
+
+	    echo "encontrou o estado" .  "<br>";
+
+		$row = mysqli_fetch_array($sql_get_state, MYSQLI_NUM);
+		$current_state = $row[0];
+
+		$next_state = $current_state + 1;
+
+		$sql_change_state = mysqli_query($con, "UPDATE `PIZZA` SET `ESTADO`= $next_state WHERE `ID_PIZZA` = $pizza_id");
+
+		if (!$sql_change_state)
+	    {
+	      die('Estado da pizza não foi actualizado: ' . mysqli_error($con));
+	    } 
+
+	    echo "mudou o estado!" .  "<br>";
+	}
 ?>
 
 <html>
@@ -39,44 +71,46 @@
 			<div class="row">
 				<div class="col s10 m10 l10 offset-s1 offset-m1 offset-l1">
 
-					<table>
-						<thead>
-							<tr>
-								<th data-field="id">Cliente</th>
-								<th data-field="id">Pizza</th>
-								<th data-field="id">Enc</th>
-								<th data-field="id">Estado</th>
-								<th data-field="id">Tamanho</th>
-								<th data-field="id">Massa</th>
-								<th data-field="id">Tomate</th>
-								<th data-field="id">Queijo</th>
-								<th data-field="id">Data</th>
-								<th data-field="id">Preço</th>
-							</tr>
-						</thead>
-						
-						<tbody>
-						<?php
-							include "php/connect.php";
+					<form method="POST">
+						<table>
+							<thead>
+								<tr>
+									<th data-field="id">Cliente</th>
+									<th data-field="id">Pizza</th>
+									<th data-field="id">Enc</th>
+									<th data-field="id">Estado</th>
+									<th data-field="id">Tamanho</th>
+									<th data-field="id">Massa</th>
+									<th data-field="id">Tomate</th>
+									<th data-field="id">Queijo</th>
+									<th data-field="id">Data</th>
+									<th data-field="id">Preço</th>
+								</tr>
+							</thead>
 							
-							$sql_get_encs = "SELECT ENCOMENDA.CLI_ID_CLIENTE, PIZZA.ID_PIZZA, PIZZA.ID_ENC, PIZZA.ESTADO, PIZZA.TAMANHO, PIZZA.MASSA, PIZZA.TOMATE, PIZZA.QUEIJO, PIZZA.DATA, PIZZA.PRECO FROM PIZZA, ENCOMENDA where PIZZA.ID_ENC = ENCOMENDA.ID_ENC ";
+							<tbody>
+							<?php
+								include "php/connect.php";
+								
+								$sql_get_encs = "SELECT ENCOMENDA.CLI_ID_CLIENTE, PIZZA.ID_PIZZA, PIZZA.ID_ENC, PIZZA.ESTADO, PIZZA.TAMANHO, PIZZA.MASSA, PIZZA.TOMATE, PIZZA.QUEIJO, PIZZA.DATA, PIZZA.PRECO FROM PIZZA, ENCOMENDA where PIZZA.ID_ENC = ENCOMENDA.ID_ENC ";
 
-							$result = mysqli_query($con, $sql_get_encs);
+								$result = mysqli_query($con, $sql_get_encs);
 
-							if (!$result){
-								die('Error: ' . mysqli_error($con));
-							}
+								if (!$result){
+									die('Error: ' . mysqli_error($con));
+								}
 
-							$row = mysqli_fetch_assoc($result);
-
-							while ( $row != null){ 
-								echo "<tr><td>" . $row['CLI_ID_CLIENTE'] . "</td><td> ". $row['ID_PIZZA'] . "</td><td> " . $row['ID_ENC'] . "</td><td>" . $row['ESTADO'] . "</td><td>" . $row['TAMANHO'] . "</td><td>" . $row['MASSA'] . "</td><td>" . $row['TOMATE'] . "</td><td>" . $row['QUEIJO'] . "</td><td>" . $row['DATA'] . "</td><td>" . $row['PRECO'] . "</td></tr>";
 								$row = mysqli_fetch_assoc($result);
-							}
-						?>
 
-						</tbody>
-					</table>
+								while ( $row != null){ 
+									echo "<tr><td>" . $row['CLI_ID_CLIENTE'] . "</td><td> ". $row['ID_PIZZA'] . "</td><td> " . $row['ID_ENC'] . "</td><td>" . $row['ESTADO'] . "</td><td>" . $row['TAMANHO'] . "</td><td>" . $row['MASSA'] . "</td><td>" . $row['TOMATE'] . "</td><td>" . $row['QUEIJO'] . "</td><td>" . $row['DATA'] . "</td><td>" . $row['PRECO'] . "</td><td>" . "<button class='waves-effect waves-light btn' type='submit' name='state_changer' value='" . $row['ID_PIZZA'] . "'>Btn!</button>" . "</td></tr>";
+									$row = mysqli_fetch_assoc($result);
+								}
+							?>
+
+							</tbody>
+						</table>
+					</form>
 
 				</div>
 			</div>

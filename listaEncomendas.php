@@ -45,8 +45,9 @@
 								<th data-field="id">Id Enc</th>
 								<th data-field="id">Id Cliente</th>
 								<th data-field="id">Data</th>
-								<th data-field="id">Estado</th>
 								<th data-field="id">Preço</th>
+								<th data-field="id">Estado</th>
+								<th data-field="id">Btn</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -64,7 +65,7 @@
 							$row = mysqli_fetch_assoc($result);
 
 							while ( $row != null){ 
-								echo "<tr><td>" . $row['ID_ENC'] . "</td><td> ". $row['CLI_ID_CLIENTE'] . "</td><td>" . $row['DATA'] . "</td><td>" . $row['ESTADO'] . "</td><td>" . $row['PRECO'] . "</td></tr>";
+								echo "<tr><td>" . $row['ID_ENC'] . "</td><td> ". $row['CLI_ID_CLIENTE'] . "</td><td>" . $row['DATA'] . "</td><td>" . $row['PRECO'] . "</td><td>" . $row['ESTADO'] . "</td><td>" . "<a class='waves-effect waves-light btn' type='submit' name='" . $row['ID_ENC'] . "'>Btn!</a>" . "</td></tr>";
 								$row = mysqli_fetch_assoc($result);
 							}
 						?>
