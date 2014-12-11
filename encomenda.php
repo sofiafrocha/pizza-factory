@@ -42,15 +42,15 @@
 						<div class="col s6 m4 l4">
 							<label><h5> Massa: </h5></label>
 							<p>
-								<input type="radio" name="massa" id="massa1" />
+								<input type="radio" name="massa" value = "fina" id="massa1" />
 								<label for="massa1"> Massa Fina </label>
 							</p>
 							<p>
-								<input type="radio" name="massa" id="massa2" />
+								<input type="radio" name="massa" value = "alta" id="massa2" />
 								<label for="massa2"> Massa Alta </label>
 							</p>
 							<p>
-								<input type="radio" name="massa" id="massa3" />
+								<input type="radio" name="massa" value = "rolling" id="massa3" />
 								<label for="massa3"> Massa Rolling </label>
 							</p>
 							
@@ -60,11 +60,11 @@
 								<div class="col s12 l12 m12">
 									<label><h5> Molho de Tomate: </h5></label>
 									<p>
-										<input type="radio" name ="tomate" id="tomate1" />
+										<input type="radio" name ="tomate" id="tomate1" value="yes" />
 										<label for="tomate1"> Sim, com molho </label>
 									</p>
 									<p>
-										<input type="radio" name ="tomate" id="tomate2" />
+										<input type="radio" name ="tomate" id="tomate2" value="no" />
 										<label for="tomate2"> Não, sem molho </label>
 									</p>
 								</div>
@@ -74,15 +74,15 @@
 						<div class="col s6 m4 l4">
 							<label><h5> Queijo: </h5></label>
 							<p>
-								<input type="radio" name ="queijo" id="queijo1" />
+								<input type="radio" name ="queijo" ivalue="mozarella" d="queijo1" />
 								<label for="queijo1"> Mozarella </label>
 							</p>
 							<p>
-								<input type="radio" name ="queijo" id="queijo2" />
+								<input type="radio" name ="queijo" value="cabra" id="queijo2" />
 								<label for="queijo2"> Queijo de Cabra </label>
 							</p>
 							<p>
-								<input type="radio" name ="queijo" id="queijo3" />
+								<input type="radio" name ="queijo" value="nenhum" id="queijo3" />
 								<label for="queijo3"> Nenhum </label>
 							</p>
 							<br>
@@ -90,15 +90,15 @@
 								<div class="col s12 m12 l12">
 									<label><h5> Tamanho da Pizza: </h5></label>
 									<p>
-										<input type="radio" name ="tamanho" id="tamanho1" />
+										<input type="radio" name ="tamanho" value="individual" id="tamanho1" />
 										<label for="tamanho1"> Individual </label>
 									</p>
 									<p>
-										<input type="radio" name ="tamanho" id="tamanho2" />
+										<input type="radio" name ="tamanho" value="media" id="tamanho2" />
 										<label for="tamanho2"> Média </label>
 									</p>
 									<p>
-										<input type="radio" name ="tamanho" id="tamanho3" />
+										<input type="radio" name ="tamanho" value="grande" id="tamanho3" />
 										<label for="tamanho3"> Grande </label>
 									</p>
 								</div>

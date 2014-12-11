@@ -1,6 +1,13 @@
 <?php
 	session_start();
-	include "connect.php";
+
+	echo "Logged of. Bye!";
+
+	$_SESSION['user_id'] = '';
+	$_SESSION['name'] = '';
+	$_SESSION['username'] = '';
+	$_SESSION['logged_in'] = false;
+
 ?>
 
 <html>
@@ -53,7 +60,6 @@
 					<a href="#!" class="collection-item"><?php echo $_SESSION['username'] ?></a>
 					<a href="#!" class="collection-item"><?php echo $_SESSION['logged_in'] ?></a>
 			</div>
-			
 		</div>
 		
 		<!--Import jQuery before materialize.js-->
