@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
    <head>
       <title>Encomenda</title>
@@ -27,36 +28,36 @@
          </div>
       </nav>
       <div class="container">
+        <form action="php/encomenda.php" method="POST">
          <div class="row">
             <div class="col s6 m4 l4">
-               <form action="php/encomenda.php" method="POST">
                     <label>
-                    <h5> Massa: </h5>
+                    Massa:
                     </label>
                     <p>
-                    <input type="radio" name="massa" id="massa1" />
-                    <label for="massa1"> Massa Fina </label>
+                    <input type="radio" name="massa" id="massafina" value="massafina" />
+                    <label for="massafina"> Massa Fina </label>
                     </p>
                     <p>
-                    <input type="radio" name="massa" id="massa2" />
-                    <label for="massa2"> Massa Alta </label>
+                    <input type="radio" name="massa" id="massaalta" value="massaalta"/>
+                    <label for="massaalta"> Massa Alta </label>
                     </p>
                     <p>
-                    <input type="radio" name="massa" id="massa3" />
-                    <label for="massa3"> Massa Rolling </label>
+                    <input type="radio" name="massa" id="massarolling" value="massarolling"/>
+                    <label for="massarolling"> Massa Rolling </label>
                     </p>
                 <br>
                   <div class="row">
                      <div class="col s12 l12 m12">
                         <label>
-                        <h5> Molho de Tomate: </h5>
+                        Molho de Tomate:
                         </label>
                         <p>
-                        <input type="radio" name ="tomate" id="tomate1" />
+                        <input type="radio" name ="tomate" id="simtomate" />
                         <label for="tomate1"> Sim, com molho </label>
                         </p>
                         <p>
-                        <input type="radio" name ="tomate" id="tomate2" />
+                        <input type="radio" name ="tomate" id="naotomate" />
                         <label for="tomate2"> Não, sem molho </label>
                         </p>
                      </div>
@@ -64,7 +65,7 @@
             </div>
             <div class="col s6 m4 l4">
                 <label>
-                <h5> Queijo: </h5>
+                Queijo:
                 </label>
                 <p>
                 <input type="radio" name ="queijo" id="queijo1" />
@@ -79,40 +80,42 @@
                 <label for="queijo3"> Nenhum </label>
                 </p>
                 <br>
+                
                 <div class="row">
                 <div class="col s12 m12 l12">
-                    <label><h5> Tamanho da Pizza: </h5></label>
+                    <label>Tamanho da Pizza:</label>
                     <p>
-                    <input type="radio" name ="tamanho" id="tamanho1" />
-                    <label for="tamanho1"> Individual </label>
+                    <input type="radio" name="tamanho" id="individual" value="individual" />
+                    <label for="individual"> Individual </label>
                     </p>
                     <p>
-                    <input type="radio" name ="tamanho" id="tamanho2" />
-                    <label for="tamanho2"> Média </label>
+                    <input type="radio" name="tamanho" id="media" value="media" />
+                    <label for="media"> Média </label>
                     </p>
                     <p>
-                    <input type="radio" name ="tamanho" id="tamanho3" />
-                    <label for="tamanho3"> Grande </label>
+                    <input type="radio" name="tamanho" id="grande" value="grande" />
+                    <label for="grande"> Grande </label>
                     </p>
                 </div>
                 </div>
             </div>
+             
             <div class="col s6 m4 l4">
-            <label><h5> Ingredientes: </h5></label>
+            <label>Ingredientes:</label>
                 <p>
-                <input type="number" id="ingrediente1" max="3" min="0"/>
+                <input type="number" id="ingrediente1" name="ingrediente" value="1" max="3" min="0"/>
                 <label for="ingrediente1"> Pimento </label>
                 </p>
                 <p>
-                <input type="number" id="ingrediente2" max="3" min="0"/>
+                <input type="number" id="ingrediente2" name="ingrediente" max="3" min="0"/>
                 <label for="ingrediente2"> Ananás </label>
                 </p>
                 <p>
-                <input type="number" id="ingrediente3" max="3" min="0"/>
+                <input type="number" id="ingrediente3" name="ingrediente" max="3" min="0"/>
                 <label for="ingrediente3"> Cogumelos </label>
                 </p>
                 <p>
-                <input type="number" id="ingrediente4" max="3" min="0"/>
+                <input type="number" id="ingrediente4" name="ingrediente" max="3" min="0"/>
                 <label for="ingrediente4"> Bacon </label>
                 </p>
                 <p>

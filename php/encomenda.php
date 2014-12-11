@@ -11,7 +11,7 @@
 	{
 		die('Error: ' . mysqli_error($con));
 	} 
-
+/*
 	$user_id = $_SESSION['user_id'];
     $sql_enc = mysqli_query($con, "INSERT INTO ENCOMENDA (CLI_ID_CLIENTE, ESTADO) VALUES ($user_id, 0)");
 
@@ -20,7 +20,7 @@
       die('Error 1: ' . mysqli_error($con));
     } 
 
-	echo "encomenda confirmada" . "<br>"; 
+	echo "encomenda confirmada" . "<br>"; */
 
 	//ir buscar o id da encomenda que acabou de fazer -_-
 	//listar todos, ordenar por data e limitar ao primeiro
@@ -42,6 +42,20 @@
 
 	echo "inseriu pizza" . "<br>";
 
+    //upa upa variáveis
+if (isset($_POST['action'])) {
+    echo $_POST['massa']. "<br>";
+    echo "funciona bitch"."<br>";
+    echo $_POST['tamanho']."oi"."<br>";
+    echo $_POST['queijo']."smile bitch"."<br>";
+echo $_POST['ingrediente']."tchau";
+} else {
+    echo "no";
+}
+
+
+
+/*
     //encontrar id da pizza que acabámos de fazer -_-
 	//listar todos, ordenar por data e limitar ao primeiro
 	$sql_getIdPizza="SELECT id_pizza FROM PIZZA ORDER BY data desc LIMIT 1";
@@ -55,13 +69,13 @@
 	//por ingredientes na pizza
 	$sql_ingredientes="INSERT INTO PIZZA_has_INGREDIENTE (id_ingrediente, id_pizza) VALUES ('1', '$id_pizza'), ('2', '$id_pizza'), ('3',     '$id_pizza'), ('4', '$id_pizza')";
     $result=mysqli_query($con,$sql_ingredientes);
-    
+    */
 
 	if (!$result)
     {
       die('Error: ' . mysqli_error($con));
     }
-	echo "pôs os ingredientes " . "<br>";
+	//echo "pôs os ingredientes " . "<br>"; 
 	
 	mysqli_close($db);
 
