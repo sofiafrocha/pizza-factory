@@ -43,6 +43,8 @@
 					<a href="listaPizzas.php">Lista Pizzas</a>
 					<br>
 					<a href="logout.php">Log Out</a>
+					<br>
+					<a href="stock.php">Stock de Ingredientes</a>
 				</div>
 			</div>
 			
