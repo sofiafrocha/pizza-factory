@@ -1,6 +1,5 @@
 <?php
 	session_start();
-	include "connect.php";
 ?>
 
 <html>
@@ -37,45 +36,36 @@
 			</nav>
 			
 			<div class="row">
-				<div class="input-field col s12">
-					<form action="obrigado.php" method="POST">
-						<div class="input-field col s6">
-							<label for="nome">Nome</label>
-							<input type="text" name="nome" required>
-						</div>
-						
-						<div class="input-field col s6">
-							<label for="morada">Morada</label>
-							<input type="text" name="morada" required>
-						</div>
-						
-						<div class="input-field col s6">
-							<input type="text" name="telefone" required>
-							<label for="telefone">Telefone</label>
-						</div>
-						
-						<div class="input-field col s6">
-							<input type="text" name="email" required>
-							<label for="email">E-mail</label>
-						</div>
-						
-						<div class="input-field col s6">
-							<input type="text" name="username" required>
-							<label for="username">Username</label>
-						</div>
-						
-						<div class="input-field col s6">
-							<input type="text" name="password" required>
-							<label for="password">Password</label>
-						</div>
-						
-						<button class="btn waves-effect waves-light" type="submit" name="action">Confirmar 
-                           <i class="mdi-content-send right"></i>
-                        </button>
-					</form>
+				<div class="col s4 m4 l4 offset-s4 offset-m4 offset-l4">
+					<?php
+						include "php/connect.php";
+
+						if (isset($_POST[action])) {
+							$sql_sign_up = "INSERT INTO `CLIENTE` (NOME, MORADA, TELEFONE, EMAIL, USERNAME, PASSWORD) VALUES ('$_POST[nome]','$_POST[morada]','$_POST[telefone]','$_POST[email]', '$_POST[username]', '$_POST[password]')";
+
+							if (!mysql_query($con,$sql_sign_up))
+							{
+								die('Error: ' . mysqli_error($con));
+							}
+
+							echo "Obrigado por se registar no The Pizza Factory!";
+
+							mysqli_close($db);
+
+
+							mysqli_close($con);
+						}
+					?>
 				</div>
 			</div>
 			
+			<div class="collection">
+			
+					<a href="#!" class="collection-item"><?php echo $_SESSION['user_id'] ?></a>
+					<a href="#!" class="collection-item"><?php echo $_SESSION['name'] ?></a>
+					<a href="#!" class="collection-item"><?php echo $_SESSION['username'] ?></a>
+					<a href="#!" class="collection-item"><?php echo $_SESSION['logged_in'] ?></a>
+			</div>
 		</div>
 		
 		<!--Import jQuery before materialize.js-->

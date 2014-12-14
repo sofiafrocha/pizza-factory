@@ -67,7 +67,8 @@
 					</ul>
 				</div>
 			</nav>
-			
+
+			<?php if ($_SESSION[username] == 'dvader' or $_SESSION[username] == 'okenobi') { ?>
 			<div class="row">
 				<div class="col s10 m10 l10 offset-s1 offset-m1 offset-l1">
 					<form method="POST">
@@ -106,6 +107,11 @@
 					</form>
 				</div>
 			</div>
+			<?php }
+				else{
+					echo "Você não tem permissões para aceder a esta área do The Pizza Factory";
+				}
+				?>
 			
 			<div class="collection">
 			
