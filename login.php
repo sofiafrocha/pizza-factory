@@ -29,12 +29,20 @@
          
          //armazena user id
          $_SESSION['user_id'] = $row['ID_CLIENTE'];
+         //versão labrega
+         $userid = $_SESSION['user_id'];
          $_SESSION['name'] = $row['NOME'];
          $_SESSION['username'] = $row['USERNAME'];
          $_SESSION['logged_in'] = true;
          
          echo "session user " . $_SESSION['user_id'] . "<br>";
          echo "sql user " . $row['ID_CLIENTE'] . "<br>";
+          
+          $sql_id_enc = mysqli_query($con, "SELECT ID_ENC FROM `ENCOMENDA` where CLI_ID_CLIENTE ='$userid' ORDER BY data desc LIMIT 1"); 
+         $row = mysqli_fetch_assoc($sql_id_enc);
+          
+          $_SESSION['id_enc'] = $row['ID_ENC'];
+          echo "encomenda em sessão: ".$_SESSION['id_enc'].'<br>';
          
          echo "login successfull"; 
          //echo "<a href="../index.php">index</a>"; 

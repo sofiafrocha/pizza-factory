@@ -193,7 +193,7 @@
 
                   <div class="row">
                      <div class="col offset-s3 s3">
-                     <form action="done.html">
+                     <form action="../done.php">
                         <button class="btn waves-effect waves-light" type="submit" name="concluir"> Concluir encomenda 
                            <i class="mdi-content-send right"></i>
                         </button>

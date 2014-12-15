@@ -37,7 +37,7 @@
 			</nav>
 
 			<?php if ($_SESSION[username] != '') { ?>
-					<form action="php/encomenda.php" method="POST">
+					<form action="php/inserirpizza.php" method="POST">
 
 						<div class="row">
 								<div class="col s6 m4 l4">
