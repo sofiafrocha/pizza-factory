@@ -38,6 +38,8 @@
       // $_SESSION['id_enc'] = '';
           
          $preco_enc = 0;
+          $_SESSION['preco'] = $preco_enc;
+          echo "preço encomenda:".$preco_enc;
          
          echo "session user " . $_SESSION['user_id'] . "<br>";
          echo "sql user " . $row['ID_CLIENTE'] . "<br>";

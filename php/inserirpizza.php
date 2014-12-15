@@ -42,7 +42,26 @@
         $tomate = $_POST['tomate'];
 	    echo "passou QUEIJO: " . $_POST['queijo']."<br>";
         $queijo = $_POST['queijo'];
-		echo "passou INGREDIENTE: " . $_POST['ingrediente']. "<br>";
+        
+		echo "passou INGREDIENTES: "."<br>";
+        $ingrediente1 = $_POST['ingrediente1'];
+        echo $ingrediente1;
+        
+        $ingrediente2 = $_POST['ingrediente2'];
+        echo $ingrediente2;
+        
+        $ingrediente3 = $_POST['ingrediente3'];
+        echo $ingrediente3;
+        
+        $ingrediente4 = $_POST['ingrediente4'];
+        echo $ingrediente4;
+        
+        $ingrediente5 = $_POST['ingrediente5'];
+        echo $ingrediente5;
+        
+        $ingrediente6 = $_POST['ingrediente6'];
+        echo $ingrediente6;
+        
 	} else {
 	    echo "no";
 	}
@@ -115,7 +134,7 @@
         echo "não selecionaste o tamanho, pois não?"."<br>";
     } 
 
-    $preco_enc = $preco_enc + $preco;
+    $_SESSION['preco'] = $_SESSION['preco'] + $preco;
 
      //fazer uma pizza
         $sql_pizza="INSERT INTO PIZZA (id_enc, estado, tamanho, massa, tomate, queijo, preco) VALUES ('$id_enc', 0, '$tamanho', '$massa', '$tomate', '$queijo', '$preco')";
@@ -142,8 +161,9 @@
 	
 	echo "encontrou o id da pizza: " . $id_pizza . "<br>";
 
+
 	//por ingredientes na pizza
-	$sql_ingredientes="INSERT INTO PIZZA_has_INGREDIENTE (id_ingrediente, id_pizza) VALUES ('1', '$id_pizza'), ('2', '$id_pizza'), ('3','$id_pizza'), ('4', '$id_pizza')";
+	$sql_ingredientes="INSERT INTO PIZZA_has_INGREDIENTE (id_ingrediente, id_pizza) VALUES ('1', '$id_pizza'), ('1', '$id_pizza'), ('3','$id_pizza'), ('4', '$id_pizza')";
     $result=mysqli_query($con,$sql_ingredientes);
 
 	if (!$result)
