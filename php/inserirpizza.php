@@ -115,8 +115,10 @@
         echo "não selecionaste o tamanho, pois não?"."<br>";
     } 
 
+    $preco_enc = $preco_enc + $preco;
+
      //fazer uma pizza
-        $sql_pizza="INSERT INTO PIZZA (id_enc, estado, tamanho, massa, tomate, queijo) VALUES ('$id_enc', 0, '$tamanho', '$massa', '$tomate', '$queijo')";
+        $sql_pizza="INSERT INTO PIZZA (id_enc, estado, tamanho, massa, tomate, queijo, preco) VALUES ('$id_enc', 0, '$tamanho', '$massa', '$tomate', '$queijo', '$preco')";
 
 	if (!mysqli_query($con,$sql_pizza))
     {

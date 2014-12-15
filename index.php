@@ -58,6 +58,7 @@
 					<a href="#!" class="collection-item"><?php echo $_SESSION['name'] ?></a>
 					<a href="#!" class="collection-item"><?php echo $_SESSION['username'] ?></a>
 					<a href="#!" class="collection-item"><?php echo $_SESSION['logged_in'] ?></a>
+                    <a href="#!" class="collection-item"><?php echo $preco_enc ?></a>
 			</div>
 			
 		</div>

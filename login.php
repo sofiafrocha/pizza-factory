@@ -31,9 +31,13 @@
          $_SESSION['user_id'] = $row['ID_CLIENTE'];
          //versão labrega
          $userid = $_SESSION['user_id'];
+          
          $_SESSION['name'] = $row['NOME'];
          $_SESSION['username'] = $row['USERNAME'];
          $_SESSION['logged_in'] = true;
+      // $_SESSION['id_enc'] = '';
+          
+         $preco_enc = 0;
          
          echo "session user " . $_SESSION['user_id'] . "<br>";
          echo "sql user " . $row['ID_CLIENTE'] . "<br>";
@@ -45,8 +49,6 @@
           echo "encomenda em sessão: ".$_SESSION['id_enc'].'<br>';
          
          echo "login successfull"; 
-         //echo "<a href="../index.php">index</a>"; 
-         //por redirect 
       }
 
       //password está errada
