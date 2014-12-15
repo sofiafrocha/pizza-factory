@@ -63,7 +63,7 @@
 						<li><a href="ementa.php">Ementa</a></li>
 						<li><a href="encomenda.php">Encomendar</a></li>
 						<li><a href="registar.php">Registar</a></li>
-						<li><a href="login.php">Log In</a></li>
+						<li><a href="login.php">Iniciar Sessão</a></li>
 					</ul>
 				</div>
 			</nav>

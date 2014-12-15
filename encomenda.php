@@ -31,7 +31,7 @@
 						<li><a href="ementa.php">Ementa</a></li>
 						<li><a href="encomenda.php">Encomendar</a></li>
 						<li><a href="registar.php">Registar</a></li>
-						<li><a href="login.php">Log In</a></li>
+						<li><a href="login.php">Iniciar Sessão</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -61,11 +61,11 @@
 										<div class="col s12 l12 m12">
 											<label><h5> Molho de Tomate: </h5></label>
 											<p>
-												<input type="radio" name ="tomate" id="tomate1" value="yes" />
+												<input type="radio" name ="tomate" id="tomate1" value="1" />
 												<label for="tomate1"> Sim, com molho </label>
 											</p>
 											<p>
-												<input type="radio" name ="tomate" id="tomate2" value="no" />
+												<input type="radio" name ="tomate" id="tomate2" value="0" />
 												<label for="tomate2"> Não, sem molho </label>
 											</p>
 										</div>
@@ -75,15 +75,15 @@
 								<div class="col s6 m4 l4">
 									<label><h5> Queijo: </h5></label>
 									<p>
-										<input type="radio" name ="queijo" ivalue="mozarella" d="queijo1" />
+										<input type="radio" name ="queijo" value="1" id="queijo1" />
 										<label for="queijo1"> Mozarella </label>
 									</p>
 									<p>
-										<input type="radio" name ="queijo" value="cabra" id="queijo2" />
+										<input type="radio" name ="queijo" value="2" id="queijo2" />
 										<label for="queijo2"> Queijo de Cabra </label>
 									</p>
 									<p>
-										<input type="radio" name ="queijo" value="nenhum" id="queijo3" />
+										<input type="radio" name ="queijo" value="0" id="queijo3" />
 										<label for="queijo3"> Nenhum </label>
 									</p>
 									<br>
@@ -154,7 +154,7 @@
 					</form>
 				<?php }
 				else{
-					echo "Por favor faça log in para aceder à área das encomendas.";
+					echo "Por favor faça Iniciar Sessão para aceder à área das encomendas.";
 				}
 				?>
 			
