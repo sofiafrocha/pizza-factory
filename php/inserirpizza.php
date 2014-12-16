@@ -7,7 +7,7 @@
 
 
 	$user_id = $_SESSION['user_id'];
-    $sql_enc = mysqli_query($con, "INSERT INTO ENCOMENDA (CLI_ID_CLIENTE, ESTADO) VALUES ($user_id, 0)");
+  $sql_enc = mysqli_query($con, "INSERT INTO ENCOMENDA (CLI_ID_CLIENTE, ESTADO) VALUES ($user_id, 0)");
 
 	if (!$sql_enc)
     {

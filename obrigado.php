@@ -41,16 +41,17 @@
 						include "php/connect.php";
 
 						if (isset($_POST[action])) {
-							$sql_sign_up = "INSERT INTO `CLIENTE` (NOME, MORADA, TELEFONE, EMAIL, USERNAME, PASSWORD) VALUES ('$_POST[nome]','$_POST[morada]','$_POST[telefone]','$_POST[email]', '$_POST[username]', '$_POST[password]')";
 
-							if (!mysql_query($con,$sql_sign_up))
+							$sql_enc = mysqli_query($con, "INSERT INTO `CLIENTE` (NOME, MORADA, TELEFONE, EMAIL, USERNAME, PASSWORD) VALUES ('$_POST[nome]','$_POST[morada]','$_POST[telefone]','$_POST[email]', '$_POST[username]', '$_POST[password]')");
+
+							if (!$sql_enc)
 							{
 								die('Error: ' . mysqli_error($con));
 							}
 
 							echo "Obrigado por se registar no The Pizza Factory!";
 
-							mysqli_close($db);
+							//mysqli_close($db);
 
 
 							mysqli_close($con);
