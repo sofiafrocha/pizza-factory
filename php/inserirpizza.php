@@ -5,16 +5,21 @@
 	echo "Mariana is taking control" . "<br>";
 	echo $_SESSION['username'] . " está a fazer uma encomenda" ."<br>";
 
-
 	$user_id = $_SESSION['user_id'];
-  $sql_enc = mysqli_query($con, "INSERT INTO ENCOMENDA (CLI_ID_CLIENTE, ESTADO) VALUES ($user_id, 0)");
 
-	if (!$sql_enc)
-    {
-      die('Encomenda não inserida: ' . mysqli_error($con));
-    } 
+    if ($_SESSION['pizza_inicial'] = false) {
+        $sql_enc = mysqli_query($con, "INSERT INTO ENCOMENDA (CLI_ID_CLIENTE, ESTADO) VALUES ($user_id, 0)");
+        
+        $_SESSION['pizza_inicial'] = true;
+        
+        if (!$sql_enc)
+        {
+          die('Encomenda não inserida: ' . mysqli_error($con));
+        } 
 
-	echo "encomenda inserida" . "<br>";
+        echo "encomenda inserida" . "<br>";
+
+    }
 
 	//ir buscar o id da encomenda que acabou de fazer -_-
 	//listar todos, ordenar por data e limitar ao primeiro
@@ -172,6 +177,11 @@
     }
 
 	echo "pôs os ingredientes " . "<br>"; 
+
+    $preco_enc =  $_SESSION['preco'];
+    echo $preco_enc."preco enc"."<br>";
+    $update_preco = "UPDATE `ENCOMENDA` SET `PRECO`= '$preco_enc' WHERE ID_ENC = '$id_enc'";
+    $result = mysqli_query($con, $update_preco);
 	
 	mysqli_close($db);
 

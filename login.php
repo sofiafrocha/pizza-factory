@@ -37,7 +37,8 @@
          $_SESSION['logged_in'] = true;
       // $_SESSION['id_enc'] = '';
           
-         $preco_enc = 0;
+          $preco_enc = 0;
+          $preco = 0;
           $_SESSION['preco'] = $preco_enc;
           echo "preço encomenda:".$preco_enc;
          
@@ -49,6 +50,7 @@
           
           $_SESSION['id_enc'] = $row['ID_ENC'];
           echo "encomenda em sessão: ".$_SESSION['id_enc'].'<br>';
+          $_SESSION['pizza_inicial'] = false;
          
          echo "login successfull"; 
       }

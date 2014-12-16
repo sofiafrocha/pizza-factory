@@ -7,6 +7,9 @@
 	$_SESSION['name'] = '';
 	$_SESSION['username'] = '';
 	$_SESSION['logged_in'] = false;
+    $_SESSION['id_enc'] = '';
+    $_SESSION['preco'] = '';
+    $_SESSION['pizza_inicial'] = false;
 
 ?>
 
