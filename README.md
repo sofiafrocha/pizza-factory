@@ -11,7 +11,7 @@ Manual de Instalação
 Requisitos:
  - [MAMP](http://www.mamp.info/en/downloads/) ou equivalente
 
-Passos:
+Passos:   
 1. Fazer o download do [pizza-factory-master.zip](https://github.com/sofiafrocha/pizza-factory/archive/master.zip)
 2. Descomprimir o ficheiro
 3. Dentro da pasta "1.0" estão duas pastas, "database" e "pizza_factory"
