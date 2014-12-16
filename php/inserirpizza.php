@@ -60,7 +60,7 @@
         echo $ingrediente5;
         
         $ingrediente6 = $_POST['ingrediente6'];
-        echo $ingrediente6;
+        echo $ingrediente6."<br>";
         
 	} else {
 	    echo "no";
@@ -163,7 +163,7 @@
 
 
 	//por ingredientes na pizza
-	$sql_ingredientes="INSERT INTO PIZZA_has_INGREDIENTE (id_ingrediente, id_pizza) VALUES ('1', '$id_pizza'), ('1', '$id_pizza'), ('3','$id_pizza'), ('4', '$id_pizza')";
+	$sql_ingredientes="INSERT INTO PIZZA_has_INGREDIENTE (id_ingrediente, id_pizza, numero) VALUES ('1', '$id_pizza', '$ingrediente1'), ('2', '$id_pizza', '$ingrediente2'), ('3', '$id_pizza', '$ingrediente3'), ('4', '$id_pizza', '$ingrediente4'), ('5', '$id_pizza', '$ingrediente5'), ('6', '$id_pizza', '$ingrediente6') ";
     $result=mysqli_query($con,$sql_ingredientes);
 
 	if (!$result)

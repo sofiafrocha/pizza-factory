@@ -107,40 +107,32 @@
 								</div>
 
 								<div class="col s6 m4 l4">
-									<label><h5> Ingredientes: </h5></label>
-									<p>
-										<input type="number" id="ingrediente1" max="3" min="0"/>
-										<label for="ingrediente1"> Pimento </label>
-									</p>
-									<p>
-										<input type="number" id="ingrediente2" max="3" min="0"/>
-										<label for="ingrediente2"> Ananás </label>
-									</p>
-									<p>
-										<input type="number" id="ingrediente3" max="3" min="0"/>
-										<label for="ingrediente3"> Cogumelos </label>
-									</p>
-									<p>
-										<input type="number" id="ingrediente4" max="3" min="0"/>
-										<label for="ingrediente4"> Bacon </label>
-									</p>
-									<p>
-										<input type="number" id="ingrediente5" max="3" min="0"/>
-										<label for="ingrediente5"> Courgette </label>
-									</p>
-									<p>
-										<input type="number" id="ingrediente6" max="3" min="0"/>
-										<label for="ingrediente6"> Fiambre </label>
-									</p>
-									<p>
-										<input type="number" id="ingrediente7" max="3" min="0"/>
-										<label for="ingrediente7"> Cogumelos </label>
-									</p>
-									<p>
-										<input type="number" id="ingrediente8" max="3" min="0" disabled="disabled"/>
-										<label for="ingrediente8"> Bacon </label>
-									</p>
-								</div>
+            <label>Ingredientes:</label>
+                <p>
+                <input type="number" name="ingrediente1" max="3" min="0"/>
+                <label for="ingrediente1"> Pimento </label>
+                </p>
+                <p>
+                <input type="number" name="ingrediente2" max="3" min="0"/>
+                <label for="ingrediente2"> Ananás </label>
+                </p>
+                <p>
+                <input type="number" name="ingrediente3" max="3" min="0"/>
+                <label for="ingrediente3"> Cogumelos </label>
+                </p>
+                <p>
+                <input type="number" name="ingrediente4" max="3" min="0"/>
+                <label for="ingrediente4"> Bacon </label>
+                </p>
+                <p>
+                <input type="number" name="ingrediente5" max="3" min="0"/>
+                <label for="ingrediente5"> Courgette </label>
+                </p>
+                <p>
+                <input type="number" name="ingrediente6" max="3" min="0"/>
+                <label for="ingrediente6"> Fiambre </label>
+                </p>
+            </div>
 						</div>
 						<br> <br> <br> 
 						<div class="row">
