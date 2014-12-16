@@ -22,8 +22,11 @@ Passos:
 
 Manual de Instrucções
 =============
-O The Pizza factory tem 4 áreas para os utilizadores normais: Registar, Iniciar Sessão, Ementa e Encomendar.   
+O The Pizza factory tem 4 áreas para os utilizadores normais: **Registar**, **Iniciar Sessão**, **Ementa** e **Encomendar**.   
 Para encomendar uma deliciosa pizza, o utilizador tem de se registar, e ter iniciada a sessão.
 Existem várias opções de pizzas, na massa, molhos, ingredientes, queijo e tomate. Depois de concluir a encomenda, o utilizador só tem de esperar.   
     
-Os empregados do The Pizza Factory (exemplo de um, username:okenobi password:okenobi1) tem acesso a mais algumas páginas: a lista do stock de ingredientes (que também permite repor o stock, adicionando 100 items de cada vez), a lista das encomendas, para ver as encomendas que já foram feitas (e mudar o seu estado, se estão concluídas ou não) e a lista de pizzas, para ver as pizzas que já foram encomendadas pelos utilizadores (também se pode mudar o estado das pizzas, de estando a ser feitas, no forno, ou já nas mãos do estafeta para ser entregue).
+Os empregados do The Pizza Factory (exemplo de um, username:okenobi password:okenobi1) tem acesso a mais algumas páginas:
+ - lista do stock de ingredientes (que também permite repor o stock, adicionando 100 items de cada vez)
+ - lista das encomendas, para ver as encomendas que já foram feitas (e mudar o seu estado, se estão concluídas ou não)
+ - lista de pizzas, para ver as pizzas que já foram encomendadas pelos utilizadores (também se pode mudar o estado das pizzas, de estando a ser feitas, no forno, ou já nas mãos do estafeta para ser entregue)
