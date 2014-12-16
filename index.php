@@ -36,21 +36,27 @@
 				</div>
 			</nav>
 
-			<?php if ($_SESSION[username] == 'dvader' or $_SESSION[username] == 'okenobi') { ?>
+			<div class="row">
+				<div class="col s4 m4 l4 offset-s2 offset-m2 offset-l2">
 
-				<div class="row">
-					<div class="col s4 m4 l4 offset-s2 offset-m2 offset-l2">
-						<a href="listaEncomendas.php">Lista Encomendas</a>
-						<br>
-						<a href="listaPizzas.php">Lista Pizzas</a>
-						<br>
-						<a href="stock.php">Stock de Ingredientes</a>
-					</div>
+				<p>Bem vindo!</p>
+				<img src="img/9864611814_252b7f81bd.jpg">
+
+				<?php if ($_SESSION[username] == 'dvader' or $_SESSION[username] == 'okenobi') { ?>
+
+					<a href="listaEncomendas.php">Lista Encomendas</a>
+					<br>
+					<a href="listaPizzas.php">Lista Pizzas</a>
+					<br>
+					<a href="stock.php">Stock de Ingredientes</a>
+						
+				<?php }?>
+
+				<br>
+				<a href="logout.php">Log Out</a>
+
 				</div>
-
-			<?php }?>
-			<br>
-			<a href="logout.php">Log Out</a>
+			</div>
 			
 			<div class="collection">
 			

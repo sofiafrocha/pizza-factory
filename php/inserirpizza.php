@@ -7,10 +7,10 @@
 
 	$user_id = $_SESSION['user_id'];
 
-    if ($_SESSION['pizza_inicial'] = false) {
+    if ($_SESSION['pizza_inicial'] == false) {
         $sql_enc = mysqli_query($con, "INSERT INTO ENCOMENDA (CLI_ID_CLIENTE, ESTADO) VALUES ($user_id, 0)");
         
-        $_SESSION['pizza_inicial'] = true;
+        $_SESSION['pizza_inicial'] == true;
         
         if (!$sql_enc)
         {
@@ -264,10 +264,10 @@
       <meta name="author" content="Mariana Martins, Sofia Rocha">
       <meta name="keywords" content="pizza, food, online, order, fake, false, faux">
       
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-      <link href="css/ionicons.min.css" rel="stylesheet">
-      <link href="css/style.css" rel="stylesheet" media="screen">
-      <link href="img/favicon.ico" rel="shortcut icon">
+      <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+      <link href="../css/ionicons.min.css" rel="stylesheet">
+      <link href="../css/style.css" rel="stylesheet" media="screen">
+      <link href="../img/favicon.ico" rel="shortcut icon">
       
       <meta name="robots" content="index, follow">
       <meta name="googlebot" content="index, follow">
