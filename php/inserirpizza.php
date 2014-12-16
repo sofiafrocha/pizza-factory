@@ -139,7 +139,7 @@
         echo "não selecionaste o tamanho, pois não?"."<br>";
     } 
 
-    //preco ingredientes e retirar ao stock
+    //preco ingredientes
     $preco = $preco + $ingrediente1*1;
     $preco = $preco + $ingrediente2*1;
     $preco = $preco + $ingrediente3*1;
@@ -147,7 +147,37 @@
     $preco = $preco + $ingrediente5*1;
     $preco = $preco + $ingrediente6*1;
 
-    $sql_quantidade1="SELECT quantidade FROM INGREDIENTE WHERE id_ingrediente = 1"; 
+    for ($i=1; $i < 7; $i++) { 
+      echo("sofia taking control" . "<br>");
+      $sql_get_ingrediente_info = "SELECT id_ingrediente, quantidade FROM INGREDIENTE WHERE id_ingrediente = '$i'";
+      $result = mysqli_query($con, $sql_get_ingrediente_info);
+
+      if (!$result)
+      {
+        die('Erro a ir buscar a quantidade e id do ingrediente: ' . mysqli_error($con));
+      }
+      echo 'buscar o id do ingrediente' . '<br>';
+
+      $row = mysqli_fetch_array($result, MYSQLI_NUM);
+      $id_ingrediente = $row[0];
+
+      echo 'id do ingrediente: ' . $id_ingrediente . '<br>';
+      
+      $quantidade_original = $row[1];
+      echo 'quantidade_original: ' . $quantidade_original . '<br>';
+      $quantidade = $quantidade_original - 1;
+      echo 'quantidade a ser posta: ' . $quantidade . '<br>';
+
+
+      $sql_update_stock = mysqli_query($con, "UPDATE `INGREDIENTE` SET `QUANTIDADE`='$quantidade' WHERE `ID_INGREDIENTE` = '$id_ingrediente'");
+      if (!$sql_update_stock)
+      {
+        die('Erro a ir buscar a quantidade e id do ingrediente: ' . mysqli_error($con));
+      }
+    }
+
+
+    /*$sql_quantidade1="SELECT quantidade FROM INGREDIENTE WHERE id_ingrediente = 1"; 
     $result=mysqli_query($con, $sql_quantidade1);
     
     if (!$result)
@@ -169,9 +199,10 @@
     }
 
     $row = mysqli_fetch_array($result, MYSQLI_NUM);
-	$quantidade2 = $row[0];
+	  $quantidade2 = $row[0];
     $quantidade2 = $quantidade2 - $ingrediente2;
-    echo 'q2'.$quantidade2.'<br>'; 
+    echo 'q2'.$quantidade2.'<br>'; */
+
 
     $_SESSION['preco'] = $_SESSION['preco'] + $preco;
 
