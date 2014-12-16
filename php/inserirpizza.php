@@ -139,6 +139,40 @@
         echo "não selecionaste o tamanho, pois não?"."<br>";
     } 
 
+    //preco ingredientes e retirar ao stock
+    $preco = $preco + $ingrediente1*1;
+    $preco = $preco + $ingrediente2*1;
+    $preco = $preco + $ingrediente3*1;
+    $preco = $preco + $ingrediente4*1;
+    $preco = $preco + $ingrediente5*1;
+    $preco = $preco + $ingrediente6*1;
+
+    $sql_quantidade1="SELECT quantidade FROM INGREDIENTE WHERE id_ingrediente = 1"; 
+    $result=mysqli_query($con, $sql_quantidade1);
+    
+    if (!$result)
+    {
+      die('Erro a ir buscar a quantidade do ingrediente 1: ' . mysqli_error($con));
+    }
+
+    $row = mysqli_fetch_array($result, MYSQLI_NUM);
+	$quantidade1 = $row[0];
+    $quantidade1 = $quantidade1 - $ingrediente1;
+    echo 'q1'.$quantidade1.'<br>'; 
+
+    $sql_quantidade2="SELECT quantidade FROM INGREDIENTE WHERE id_ingrediente = 2"; 
+    $result=mysqli_query($con,$sql_quantidade2);
+
+    if (!$result)
+    {
+      die('Erro a ir buscar a quantidade do ingrediente 2: ' . mysqli_error($con));
+    }
+
+    $row = mysqli_fetch_array($result, MYSQLI_NUM);
+	$quantidade2 = $row[0];
+    $quantidade2 = $quantidade2 - $ingrediente2;
+    echo 'q2'.$quantidade2.'<br>'; 
+
     $_SESSION['preco'] = $_SESSION['preco'] + $preco;
 
      //fazer uma pizza
